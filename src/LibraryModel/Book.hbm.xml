@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 20, 2020 1:50:34 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="LibraryModel.Book" table="BOOK" schema="DAVID" optimistic-lock="version">
+        <id name="bookid" type="string">
+            <column name="BOOKID" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="title" type="string">
+            <column name="TITLE" length="15" />
+        </property>
+        <property name="publishinghouse" type="string">
+            <column name="PUBLISHINGHOUSE" length="20" />
+        </property>
+        <property name="dateofpublication" type="date">
+            <column name="DATEOFPUBLICATION" length="7" />
+        </property>
+        <property name="author" type="string">
+            <column name="AUTHOR" length="10" />
+        </property>
+        <property name="pages" type="string">
+            <column name="PAGES" length="25" not-null="true" />
+        </property>
+        <property name="numberofcopies" type="string">
+            <column name="NUMBEROFCOPIES" length="25" not-null="true" />
+        </property>
+        <property name="bookcategory" type="string">
+            <column name="BOOKCATEGORY" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>
